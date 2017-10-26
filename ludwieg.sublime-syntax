@@ -19,6 +19,10 @@ contexts:
       captures:
         1: support.function.builtin.ludwieg
 
+    - match: '(@[a-z_]+)'
+      captures:
+        1: entity.name.function.ludwieg
+
     - match: '\b(id)[\s\t]+(0x[0-9A-F]+)\b'
       captures:
         1: keyword.operator.assignment.ludwieg
@@ -27,6 +31,11 @@ contexts:
     - match: '(@[a-z_]+)\[((\*)|(\d+))\]'
       captures:
         1: entity.name.function.ludwieg
+        4: constant.numeric.ludwieg
+
+    - match: '([a-z_]+)\[((\*)|(\d+))\]'
+      captures:
+        1: support.function.builtin.ludwieg
         4: constant.numeric.ludwieg
 
     # Numbers
