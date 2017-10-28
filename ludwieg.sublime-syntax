@@ -15,9 +15,10 @@ contexts:
         1: keyword.control.ludwieg
         2: entity.name.class.ludwieg
 
-    - match: '\b(uint8|uint32|uint64|double|string|blob|bool|array|enum|uuid|any)[\s\t]+([a-z_]+)\b'
+    - match: '\b(uint8|uint32|uint64|double|string|blob|bool|uuid|any|byte)[\s\t]+([a-z_]+)[\s\t]*(![a-z]+)*\b'
       captures:
         1: support.function.builtin.ludwieg
+        3: constant.language.boolean.ludwieg
 
     - match: '(@[a-z_]+)'
       captures:
@@ -41,6 +42,9 @@ contexts:
     # Numbers
     - match: '\b((0x[0-9A-F]+)|[0-9]+)\b'
       scope: constant.numeric.ludwieg
+
+    - match: '!([a_z]+)'
+      scope: constant.language.boolean.ludwieg
 
   line_comment:
     - meta_scope: comment.line.ludwieg
