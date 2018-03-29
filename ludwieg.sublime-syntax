@@ -15,7 +15,7 @@ contexts:
         1: keyword.control.ludwieg
         2: entity.name.class.ludwieg
 
-    - match: '\b(uint8|uint32|uint64|double|string|blob|bool|uuid|any|byte)[\s\t]+([a-z_]+)[\s\t]*(![a-z]+)*\b'
+    - match: '\b(uint8|uint32|uint64|double|string|blob|bool|uuid|any|byte|dynint)[\s\t]+([a-z_]+)[\s\t]*(![a-z]+)*\b'
       captures:
         1: support.function.builtin.ludwieg
         3: constant.language.boolean.ludwieg
